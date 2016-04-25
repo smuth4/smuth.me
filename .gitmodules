@@ -1,3 +1,7 @@
 [submodule "themes/angels-ladder"]
 	path = themes/angels-ladder
 	url = https://github.com/tanksuzuki/angels-ladder
+[submodule "public"]
+	path = public
+	url = https://github.com/smuth4/smuth4.github.io.git
+	branch = master

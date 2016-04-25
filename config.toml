@@ -1,4 +1,4 @@
-baseurl = "http://smuth.me/"
+baseurl = "https://smuth.me/"
 languageCode = "en-us"
 title = "cat /dev/null > /proc/mind"
 theme = "angels-ladder"
