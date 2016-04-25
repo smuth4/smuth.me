@@ -1,4 +1,6 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd "$DIR"
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
@@ -21,4 +23,4 @@ git commit -m "$msg"
 git push origin master
 
 # Come Back
-cd ..
+popd
