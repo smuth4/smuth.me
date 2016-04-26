@@ -1,7 +1,7 @@
 +++
 title = "Check_mk and FreeNAS, Pt. 3"
 date = "2014-07-10"
-tags = ["FreeNSD", "check_mk", "monitoring"]
+tags = ["FreeNAS", "check_mk", "monitoring"]
 +++
 
 .. title: Check_mk and FreeNAS, Pt. 3
