@@ -11,7 +11,7 @@ I'm looking to monitor my drives on a FreeBSD machine via sensu.
 ## Requirements
 
 * Works on FreeBSD
-* Can filter drives (alternatively it forces you to specify a single drive
+* Can filter drives (alternatively if it forces you to specify a single drive, that's fine)
 
 ## Wishlist
 
