@@ -36,3 +36,7 @@ By far and away the most popular static site generator. However, the YY/MM/DD/ f
 ### [Hugo](https://gohugo.io/)
 
 The strongest contender so far. Simple and does what I need.
+
+## My decision
+
+I decided to go with Hugo. It's written in Go, the new hotness, doesn't force a directory structure on me, and has a really nice [selection of themes](http://themes.gohugo.io/) I can use (I'm using [angels-ladder](http://themes.gohugo.io/angels-ladder/) currently.
