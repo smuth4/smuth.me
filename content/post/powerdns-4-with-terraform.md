@@ -29,3 +29,5 @@ server {
 ```
 
 This lets us use both the new and old locations simultaneously. I'm sure this can be done in Apache as well, but wasn't up for installing it just to test something so simple.
+
+Update: This method doesn't work anymore, it doesn't handle the TTL field correctly. See https://github.com/hashicorp/terraform/issues/6056 for more information about fixing this directly in terrform.
