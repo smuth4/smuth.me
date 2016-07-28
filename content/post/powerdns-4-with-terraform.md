@@ -4,6 +4,8 @@ date = "2016-05-01"
 title = "Making Terraform work with PowerDNS 4"
 +++
 
+Edit: This post has been made obsolete by a pull request I opened in the terraform repository: https://github.com/hashicorp/terraform/pull/7819
+
 I've really enjoyed using [PowerDNS](https://www.powerdns.com/) as my DNS server at home. Most people only think of [BIND](https://www.isc.org/downloads/bind/) and [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) when it comes to DNS, while ignoring this stable, scalable, secure database-backed offering that powers some really large deployments. But enough proselytizing! I'm in the middle of trying to migrate my infrastructure to be controlled via [Terraform](https://www.terraform.io/) (mostly). I figure this will help me consolidate and track most of my VPSs and the like.
 
 ## The problem
@@ -29,5 +31,3 @@ server {
 ```
 
 This lets us use both the new and old locations simultaneously. I'm sure this can be done in Apache as well, but wasn't up for installing it just to test something so simple.
-
-Update: This method doesn't work anymore, it doesn't handle the TTL field correctly. See https://github.com/hashicorp/terraform/issues/6056 for more information about fixing this directly in terrform.
