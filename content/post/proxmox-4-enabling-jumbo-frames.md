@@ -37,7 +37,7 @@ fi
 for lower in /sys/devices/virtual/net/"${intf}"/lower_*; do
   child_intf="$(basename "$lower" | sed 's/lower_//')"
   if [[ "$(cat "$lower"/mtu)" -lt "$mtu" ]]; then
-    ip link set "$child_intf" mtu 9000
+    ip link set "$child_intf" mtu "$mtu"
   fi
 done
 ```
