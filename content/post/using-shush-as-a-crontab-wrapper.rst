@@ -13,7 +13,7 @@ tags = ["cron"]
 .. description: 
 .. type: text
 
-`Cron`_ is a great tool for linux servers, but it's a very limited in it's capabilities (since it follows the Unix philosophy), so when I started to run up against those limits, I began doing all sorts of bash trickery to accomplish what I needed to happen, but that swiftly started giving me even more problem. At work, I use the `Jenkins CI`_ tool as a cron replacement (great tool, allows for distributed runs, queueing tasks, emails on failure, etc), but it seemed rather heavy weight for a homelab. Thankfully, there are a lot of cron wrappers/replacements out there, but I settled on `shush`_, a neat little wrapper around script for cron. 
+`Cron`_ is a great tool for linux servers, but it's a very limited in it's capabilities (since it follows the Unix philosophy), so when I started to run up against those limits, I began doing all sorts of bash trickery to accomplish what I needed to happen, but that swiftly started giving me even more problem. At work, I use the `Jenkins CI`_ tool as a cron replacement (great tool, allows for distributed runs, queuing tasks, emails on failure, etc), but it seemed rather heavy weight for a homelab. Thankfully, there are a lot of cron wrappers/replacements out there, but I settled on `shush`_, a neat little wrapper script for cron. 
 
 .. TEASER_END
 
@@ -27,7 +27,7 @@ There are a couple reasons I like it:
 
 Basically how it works is that there's a designated directory that holds all the shush configuration files. These files can be named anything, although I usually have them be extensionless for simplicity. You can then run any of these files with ``shush -c <directory> <config_file_name>``. If you use the default directory of ``$HOME/.shush/``, you can just run ``shush <config_file_name>``. However, in order to have the config file run regularly, you need to set the ``schedule`` setting, and run ``shush -c <directory> -u`` to update the crontab file.
 
-The `man page`_ has some more documentation, but I'll at least break down the example config file make it more understandable.
+The `man page`_ has some more documentation, but I'll at least break down the example config file to make it more understandable.
 
 Set the command ``shush -c /etc/shush -u`` to run every day at 9 PM:
 
@@ -72,7 +72,7 @@ If one of the various failure conditions applies, send an email to root:
           to=root
           format=rich
 
-Shush is a very powerful tool, and I'm very happy with the ways that I've been able to implement it in my homelab. However, it can be a bit confusing for a beginner, and the regex matching features leave much to be desired. With the intention of fixing things up, I've create a repositoty at https://github.com/smuth4/shush, which I can hopefully use to clean up things, and get the project active again. Feel free to compile, try out and mayb even contribute to this neat little tool!
+Shush is a very powerful tool, and I'm very happy with the ways that I've been able to implement it in my homelab. However, it can be a bit confusing for a beginner, and the regexp matching features leave much to be desired. With the intention of fixing things up, I've create a repository at https://github.com/smuth4/shush, which I can hopefully use to clean up things, and get the project active again. Feel free to compile, try out and maybe even contribute to this neat little tool!
 
 .. _Cron: http://linux.die.net/man/1/crontab
 
