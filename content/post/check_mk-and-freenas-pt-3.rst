@@ -12,13 +12,11 @@ tags = ["FreeNAS", "check_mk", "monitoring"]
 .. description: 
 .. type: text
 
-A continuation of :doc:`check_mk-and-freenas-pt-2`
+A continuation of Check_mk and FreeNAS, Pt. 2
 
 Now that we have all our smart data nicely set up, let's see if we can't get some stats on I/O speed. I'm pretty sure FreeNAS is supposed to have a I/O section in its "Reports" section, but for whatever reason, it's not in my install, and I'd like to have the data in Nagios in any case.
 
 Just like with the SMART data, we're going to write a small script that the check_mk agent can use. Unlike the SMART script, getting IO stats is incredibly easy.
-
-.. listing:: iostat bash
 
 Yep, that's all it is. We're only really interesting in the drives being used in ZFS, but you could open it up to all drives if you wanted to.
 
