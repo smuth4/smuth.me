@@ -6,7 +6,7 @@ tags = ["security", "SSH"]
 
 A fun little fact I discovered about SSH: when you specify a private key to use, it checks ${key}.pub for hints about how to parse the private key, without warning. Under normal operations this is never a problem, but you need to replace a private key in-place, and don't update the .pub file, authentication will fail:
 
-```none
+{{< highlight diff >}}
 $ ls -la
 ssh.key ssh.key.pub
 $ ssh user@host echo ping
@@ -15,10 +15,11 @@ $ mv ssh.key.pub ssh.key.pub.bak
 $ ssh user@host echo ping
 Last login: Tue Oct 19
 ping
-```
+{{< / highlight >}}
 
 This can be partially seen in the output of the ssh client's `-vvv` option. On the left is with the public key preset, on the right is without:
-```none
+
+{{< highlight diff >}}
 debug1: identity file ./ssh.key type 2                   | debug1: identity file ./ssh.key type -1
 ...
 debug2: dh_gen_key: priv key bits set: 131/256           | debug2: dh_gen_key: priv key bits set: 125/256
@@ -34,6 +35,6 @@ debug2: we sent a publickey packet, wait for reply         debug2: we sent a pub
 debug3: Wrote 528 bytes for a total of 1653              | debug3: Wrote 592 bytes for a total of 1717
 debug1: Authentications that can continue: publickey,pas | debug1: Authentication succeeded (publickey).
 debug2: we did not send a packet, disable method         | debug2: fd 5 setting O_NONBLOCK
-```
+{{< / highlight >}}
 
 Interestingly, I wasn't able to find any official documentation that mentions this, and only figured it out after resorting to `strace`.
