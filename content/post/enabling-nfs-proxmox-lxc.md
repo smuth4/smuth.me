@@ -10,7 +10,7 @@ Normally, Proxmox doesn't allow mounting NFS mounts directly in containers due t
 features: mount=nfs
 ```
 
-allows NFS mounting for the specified container, although a restart will be necessary for the setting to take effect. You can verify this by running `grep nfs /var/lib/lxc/${CID}/apparmor/lxc-${CID}_\<-var-lib-lxc\>`, which return a line like `mount fstype=nfs,`. Other filesystems can also be allowed by separating the different types with semicolons.
+allows NFS mounting for the specified container, although a restart will be necessary for the setting to take effect. You can verify this by running `grep nfs /var/lib/lxc/${CID}/apparmor/lxc-${CID}_\<-var-lib-lxc\>`, which return a line like `mount fstype=nfs`. Other filesystems can also be allowed by separating the different types with semicolons.
 
 This change was released in version 2.0-28 of the pve-container package, so it's easy tell if you are affected:
 
