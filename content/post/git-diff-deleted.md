@@ -1,7 +1,7 @@
 +++
 tags = ["terraform", "powerdns"]
 date = "2019-08-05"
-title = "Git "
+title = "Finding the log for deleted files in git"
 +++
 
 Recently I came across a blog post explaining how to get the history of a deleted file: https://dzone.com/articles/git-getting-history-deleted, which pointed to yet another blog with the simple solution https://feeding.cloud.geek.nz/posts/querying-deleted-content-in-git/:
