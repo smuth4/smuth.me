@@ -1,6 +1,6 @@
 +++
-tags = ["terraform", "powerdns"]
-date = "2019-08-05"
+tags = ["git"]
+date = "2020-02-08"
 title = "Finding the log for deleted files in git"
 +++
 
@@ -14,11 +14,12 @@ However, neither explained exactly why this works, and I got interested. `--` is
 
 As the man page actually points out, git does indeed treat these differently:
 
->       [--] <path>...
->           Show only commits that are enough to explain how the files that match the specified paths came to be. See
->           History Simplification below for details and other simplification modes.
->
->           Paths may need to be prefixed with -- to separate them from options or the revision range, when confusion
->           arises.
+```
+[--] <path>...
+    Show only commits that are enough to explain how the files that match the specified paths came to be. See
+    History Simplification below for details and other simplification modes.
 
+    Paths may need to be prefixed with -- to separate them from options or the revision range, when confusion
+    arises.
+```
 The short story, according to the [History Simplification section](https://www.git-scm.com/docs/git-log#_history_simplification), appears to be that the default behavior is able to accurately track changes across moves/renames, but they also needed a way to say "track this exact path only".
