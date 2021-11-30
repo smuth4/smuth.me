@@ -9,3 +9,4 @@ github = "https://github.com/smuth4"
 googleAnalytics = "UA-80421871-1"
 analytics = "UA-80421871-1"
 showRSS = true
+languageCode = "en"
