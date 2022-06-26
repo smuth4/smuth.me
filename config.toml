@@ -4,10 +4,10 @@ title = "cat /dev/null > /proc/mind"
 theme = "terminal"
 
 [params]
-subtitle = "Ain't the brightest bit in the byte."
+subtitle = "Technology and other useless things"
 github = "https://github.com/smuth4"
-googleAnalytics = "UA-80421871-1"
-analytics = "UA-80421871-1"
+#googleAnalytics = "UA-80421871-1"
+#analytics = "UA-80421871-1"
 showRSS = true
 languageCode = "en"
 contentTypeName = "posts"
@@ -17,7 +17,7 @@ centerTheme = true
 [languages]
   [languages.en]
     title = "cat /dev/null > /proc/mind"
-    subtitle = "Ain't the brightest bit in the byte."
+    subtitle = "Technology and other useless things"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
     [languages.en.params.logo]
